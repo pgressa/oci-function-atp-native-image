@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.example
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle
+features: [annotation-api, app-name, github-workflow-oracle-oci-functions-graalvm, gradle, h2, java, java-application, jdbc-hikari, junit, oracle-cloud-sdk, oracle-function, oracle-function-http, readme, shade, slf4j-simple, yaml]
