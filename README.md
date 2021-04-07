@@ -71,3 +71,18 @@ For more invocation options visit [Invoking Functions](https://docs.cloud.oracle
 
 - [Micronaut Oracle Function Support documentation](https://micronaut-projects.github.io/micronaut-oracle-cloud/latest/guide/#httpFunctions)
 
+
+
+# Make it work in OCI Functions
+
+Create dynamic group with compartment id where the function will be deployed:
+```
+Any {resource.type = 'fnfunc', resource.compartment.id = 'oocid1.compartment.oc1.....'}
+```
+
+Create policy to allow management of databases:
+```
+Allow dynamic-group <GROUP-NAME> to manage autonomous-database-family in compartment <COMPARTMENT-NAME>
+```
+
+Wait 15 minutes, since the resource principal refresh token is valid for 15 minutes.
